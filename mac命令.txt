@@ -1,0 +1,34 @@
+1.brew:
+ 类似centos7的yum命令
+
+2.压缩命令:
+tar 
+解包：tar xvd FileName.tar
+———————————————
+.gz
+解压1：gunzip FileName.gz
+解压2：gzip -d FileName.gz
+———————————————
+.tar.gz 和 .tgz
+解压：tar zxvf *.tgz
+———————————————
+.bz2
+解压1：bzip2-d FileName.bz2
+解压2：bunzip2 FileName.bz2
+———————————————
+.tar.bz2
+解压：tar jxvf FileName.tar.bz2
+———————————————
+.bz
+解压1：bzip2 -d FileName.bz
+解压2：bunzip2 FileName.bz
+———————————————
+.tar.bz
+解压：tar jxvf FileName.tar.bz
+———————————————
+.zip
+解压：unzip FileName.zip
+———————————————
+.rar
+解压：rar x FileName.rar
+———————————————

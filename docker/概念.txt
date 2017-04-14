@@ -1,0 +1,15 @@
+1.virtualbox: 虚拟机。
+  //起个虚拟机跑 linux，然后把 docker 跑在虚拟机的linux之上。
+
+2.docker:
+ Docker是一个开源的应用容器引擎，可以轻松的为任何应用创建一个轻量级的、可移植的、自给自足的容器。
+
+3.docker-machine:
+ Docker容器集群管理的工具。
+
+4.镜像与容器:
+一个Docker镜像可以构建于另一个Docker镜像之上，这种层叠关系可以是多层的。第1层的镜像层我们称之为基础镜像（Base Image），其他层的镜像（除了最顶层）我们称之为父层镜像（Parent Image）。
+
+Docker容器可以使用命令创建：
+# docker run imagename
+它会在所有的镜像层之上增加一个可写层。这个可写层有运行在CPU上的进程，而且有两个不同的状态：运行态（Running）和退出态（Exited）。这就是Docker容器。当我们使用docker run启动容器，Docker容器就进入运行态，当我们停止Docker容器时，它就进入退出态。

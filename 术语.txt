@@ -1,0 +1,25 @@
+angularjs:
+   AngularJS 是一个 JavaScript 框架.它可通过 <script> 标签添加到 HTML 页面。
+   是一个比较完善的前端MVC框架，包含模板，数据双向绑定，路由，模块化，服务，过滤器，依赖注入等所有功能；
+   
+nodejs:
+   Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 
+   Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。 
+
+Docker:
+   Docker是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。
+
+rancher:
+Rancher 是一个容器管理的完整解决方案，并且即将成为一个完整的容器管理平台。
+Docker-compose.yml  用于将容器转为服务
+
+elk:
+
+Play:
+Play Framework是一个开源的Web应用框架，使用Scala和Java语言混合编写。Play遵循传统的MVC（Model-View-Controller: 模型、视图和控制器）模式，
+
+神策:
+神策分析,可私有化部署的用户行为分析产品.全端数据,实时打通,用户分群,精益分析.旨在帮助产品,运营,分析师实时掌握数据,驱动产品优化及运营.
+
+icescrum:
+项目管理工具

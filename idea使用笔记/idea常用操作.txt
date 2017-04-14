@@ -1,0 +1,43 @@
+1.idea快捷键:
+ window键+alt+l  :自动排列代码
+ psvm   :public static void main(){}
+ Sout   :System.out.println()
+ 
+2.历史记录：  ／／idea会缓存加载过的任何代码
+右击文件->local history
+
+3.打包:   //用自带的Lifecycle下面的install
+容易出现问题:
+  1./src/main/resources下面的配置文件打不进去。
+右击resources文件夹->“mark directory as” 选择”resources Root”
+  1.1 不要引入多余的包
+  2./读取配置文件的代码：
+   String path ="DatabaseConnectionInfo.properties";
+   properties.load(Quotation.class.getClassLoader().getResourceAsStream(path));
+
+   pom.xml文件中的配置:
+   <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+        <excludes>
+          <exclude>**/.git/*</exclude>
+        </excludes>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
+
+4.运行jar包:  (main.jar是打包的jar,x1.jar和x2.jar是依赖包)
+ 1.java -jar main.jar    //只能运行依赖包和主程序被打成一块儿的jar包
+
+ 2.进入main.jar的目录
+  java -cp main.jar:x1.jar:x2.jar com.ytx.Fetcher     //com.ytx.Fetcher是主类名。
