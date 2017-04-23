@@ -1,4 +1,4 @@
-一.从github拉项目到本地:
+一.从github拉项目到本地:   http://blog.csdn.net/hustpzb/article/details/8230454/
 1.生成公秘钥
 2.将公钥复制到github
 3.下拉项目：
