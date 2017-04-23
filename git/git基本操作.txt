@@ -1,6 +1,6 @@
-一.从github拉项目到本地:   http://blog.csdn.net/hustpzb/article/details/8230454/
+一.从github拉项目到本地:  http://blog.csdn.net/u011068702/article/details/48032385
 1.生成公秘钥
-2.将公钥复制到github
+2.将公钥复制到github    //以后push就可以ssh免密登陆。
 3.下拉项目：
 git clone http_address   :将gittub上面的项目克隆下来(http_address是项目的链接)
 
