@@ -1,0 +1,16 @@
+一.docker从镜像仓库下载镜像到本地:
+例如 ：从阿里云镜像下载镜像
+首先登陆阿里云镜像仓库:
+   其中登陆用户和邮箱可以在开发者后台的概览查询。密码是用户您在开通容器Hub服务时提供的密码。
+   docker login -u 2580246520@qq.com -p yuge123 -e 2580246520@qq.com  registry.aliyuncs.com
+
+然后:进去阿里云镜像地址:https://dev.aliyun.com/search.html
+   搜索你要的镜像，然后:
+   docker pull wordpress:latest
+   //wordpress是镜像地址，latest是版本号,注意版本号不填默认是latest,所以都要填写。版本号就会有相关介绍的。
+
+二.将本地上传镜像到远程仓库,例如:192.168.150.113:5000
+则:1.将镜像名称改为”192.168.150.113:5000/java-quotation-fetcher”,版本假如是”3.0”
+   2.docker push 192.168.150.113:5000/java-quotation-fetcher:3.0
+注意:第二步之前在docker客户端加上你的远程地址。
+  Preferences->advanced->insecure registeres里面加上192.168.150.113:5000
