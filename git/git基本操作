@@ -30,3 +30,6 @@ Git log
 查看之前修改的历史:
 Git diff head^^^^
 
+回溯本地代码的commit:
+git reset --hard
+
