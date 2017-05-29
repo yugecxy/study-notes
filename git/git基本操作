@@ -1,8 +1,8 @@
 一.从github拉项目到本地:
 1.生成公秘钥
-2.将公钥复制到github
+2.将公钥复制到github    :以后push就可以ssh免密登陆。
 3.下拉项目：
-git clone http_address   :将gittub上面的项目克隆下来(http_address是项目的链接)
+git clone http_address   :将gittub上面的项目克隆下来(http_address是项目的链接,可以ssh免密登录后就可以复制ssh地址)
 
 二.上传文件
 git add files            :添加文件  --添加一个任务
