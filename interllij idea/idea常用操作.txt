@@ -1,0 +1,8 @@
+1.idea快捷键:
+ command键+alt+l  :自动排列代码
+ psvm   :public static void main(){}
+ Sout   :System.out.println()
+ 
+2.历史记录：  ／／idea会缓存加载过的任何代码
+右击文件->local history
+

@@ -1,0 +1,76 @@
+一.第一种:
+打包:   //用maven的Lifecycle下面的install
+    容易出现问题:
+      1./src/main/resources下面的配置文件打不进去。
+    右击resources文件夹->“mark directory as” 选择”resources Root”
+      1.1 不要引入多余的包
+      2./读取配置文件的代码：
+       String path ="DatabaseConnectionInfo.properties";
+       properties.load(Quotation.class.getClassLoader().getResourceAsStream(path));
+
+       pom.xml文件中的配置:
+       <resources>
+          <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+              <include>**/*.properties</include>
+            </includes>
+            <filtering>false</filtering>
+          </resource>
+          <resource>
+            <directory>src/main/java</directory>
+            <includes>
+              <include>**/*</include>
+            </includes>
+            <excludes>
+              <exclude>**/.git/*</exclude>
+            </excludes>
+            <filtering>false</filtering>
+          </resource>
+        </resources>
+
+运行jar包:  (main.jar是打包的jar,x1.jar和x2.jar是依赖包)
+     1.java -jar main.jar    //只能运行依赖包和主程序被打成一块儿的jar包
+
+     2.进入main.jar的目录
+      java -cp main.jar:x1.jar:x2.jar com.ytx.Fetcher     //com.ytx.Fetcher是主类名。
+
+二.第二种:
+打包:打包后会在target目录下生成一个xxx-jar-with-dependencies.jar文件，这个文件不但包含了自己项目中的代码和资源，还包含了所有依赖包的内容。所以可以直接通过java -jar来运行。
+    1.在pom.xml文件中的配置:
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.5.5</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.yu.test</mainClass>                  //主类名
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>      
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+    
+    2.用maven的Lifecycle下面的install
+    会生成很多文件,其中的"xxx-jar-with-dependencies.jar"就是我们要的文件
+
+运行:
+    java -jar test-1.0-1.0-SNAPSHOT-jar-with-dependencies.jar
