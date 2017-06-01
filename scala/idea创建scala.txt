@@ -1,0 +1,10 @@
+一.sbt项目:
+二.scala项目；
+file->new->project->scala
+创建好之后右键新建一个scala class
+
+object test {
+  def main(args: Array[String]) = {
+    println("asdasf");
+  }
+}

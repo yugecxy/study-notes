@@ -1,0 +1,6 @@
+1. 类型推断：
+在编译时Scala编译器通过类型推断(Type Inference)可推断出数据类型。
+val x=4;       //scala编译器可推断出数据类型是整型
+val x:Int=4;    //当然也可以啰嗦的指定类型,这样就不需要scala的推断类型过程。
+
+2.scala的一切都是对象,一切都有自己的内存。包括Double,String等。

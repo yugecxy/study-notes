@@ -1,0 +1,17 @@
+一.类用class来定义。
+二.当实例化类时,其中的类体会执行。
+三.例如:
+class o{
+  def t():String={"2"}
+  println("1")
+}
+object test {
+  def main(args: Array[String]) = {
+    val oo=new o;
+    print(oo.t())
+  }
+}
+
+//输出结果为 12
+四.object类与class类的区别:
+object类就是静态类。

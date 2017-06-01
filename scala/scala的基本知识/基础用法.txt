@@ -6,4 +6,8 @@
  1.开头只能为字母或下划线或$
  2.组成是字母,数字或下划线。
 
-4.
+4.main函数:
+def main(args: Array[String]) = {
+    val oo=new o;
+    print(oo.t())
+  }

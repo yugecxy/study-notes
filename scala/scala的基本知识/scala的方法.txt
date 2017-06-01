@@ -1,0 +1,6 @@
+一.scala的方法体就是一个表达式。
+二.基本形式:
+def methodName(arg1:type1,arg1:type1):returnType={
+....
+....//最后一行代码是返回的值
+}
